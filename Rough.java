@@ -773,7 +773,7 @@ Number Pyramid Mast
 //        System.out.print("Enter n: ");
 //        short a =sc.nextShort();
 //        for(int i =1;i<=a;i++){
-//            for(int j=a;j>=i;j--){
+//            for(int j=a;j>i;j--){
 //                System.out.print(" ");
 //            }
 //            for(int k=1;k<=i;k++){
@@ -786,17 +786,50 @@ Number Pyramid Mast
 //        }
 //        for(int m =1;m<=a-1;m++){
 //            System.out.print(" ");
-//            for(int n=1;n<=m;n++){
+//            for(int n=1;n<m;n++){
 //                System.out.print(" ");
 //            }
 //            for(int o=a-1;o>=m;o--){
 //                System.out.print("*");
 //            }
-//            for(int p=a-1;p>=m+1;p--){
+//            for(int p=a-1;p>=m+1;p--){  //here we have taken(m+1) time because we have taken n loop least m times only
 //                System.out.print("*");
 //            }
 //            System.out.print("\n");
 //        }
+
+
+
+
+//-----------logic is same---------ALTERNATE---------------------------------------------------------
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter n:");
+//        short a= sc.nextShort();
+//        for(int i=1;i<=a;i++){
+//            for(int j=a;j>i;j--){
+//                System.out.print(" ");
+//            }
+//            for(int k=1;k<=i;k++){
+//                System.out.print("*");
+//            }
+//            for(int l=2;l<=i;l++){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+//        for(int m=1;m<=a-1;m++){
+//            for(int n=1;n<m+1;n++){
+//                System.out.print(" ");
+//            }
+//            for(int o=a;o>m;o--){
+//                System.out.print("*");
+//            }
+//            for(int p=a;p>=m+2;p--){ //here we have taken (m+2) means p will go least to m+2 times that is why we have taken n loop max to m+1 times
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+
 
 
 /*Print the given pattern
@@ -805,29 +838,6 @@ Number Pyramid Mast
 *** ***
 **   **
 *     *  ----------------------------------------------------------------------------*/
-//        Scanner sc = new Scanner(System.in);
-//        System.out.print("Enter n: ");
-//        short n =sc.nextShort();
-//        for(int i =1;i<=n;i++){
-//            for (int j=n;j>=i;j--){
-//                System.out.print("* ");
-//            }
-//            for(int k=1;k<=i;k++){
-//                System.out.print("  ");
-//            }
-//            for(int l=2;l<=i;l++){
-//                System.out.print("  ");
-//            }
-//            for(int m=n;m>=i;m--){
-//                System.out.print("* ");
-//            }
-//            System.out.println();
-//        }
-
-
-
-
-
 //-----------------------------CGPT---------------------------
 //        int n = 9; // Change the value of 'n' to adjust the size of the pattern
 //
@@ -852,5 +862,197 @@ Number Pyramid Mast
 //        }
 //---------------------------------------------------------
 
+
+
+//-----------------------------alternate--incorrect----------------
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter n: ");
+//        short n =sc.nextShort();
+//        for(int i =1;i<=n;i++){
+//            for (int j=n;j>=i;j--){
+//                System.out.print("* ");
+//            }
+//            for(int k=1;k<=i;k++){
+//                System.out.print("  ");
+//            }
+//            for(int l=2;l<=i;l++){
+//                System.out.print("  ");
+//            }
+//            for(int m=n;m>=i;m--){
+//                System.out.print("* ");
+//            }
+//            System.out.println();
+//        }
+
+//----------------------------correct------------------------------
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter n:");
+//        short a=sc.nextShort();
+//        for(int t=1;t<=(2*a-1);t++){
+//            System.out.print("*");
+//        }
+//        System.out.println();
+//        for(int i =1;i<=a-1;i++){
+//            for(int j=a-1;j>=i;j--){
+//                System.out.print("*");
+//            }
+//            for(int k=1;k<=i;k++){
+//                System.out.print(" ");
+//            }
+//            for(int m=2;m<=i;m++){
+//                System.out.print(" ");
+//            }
+//            for(int l=a-1;l>=i;l--){
+//                System.out.print("*");
+//            }
+//            System.out.println();
+//        }
+
+
+/*Print the given pattern
+Number Pyramid Mast
+1 2 3 4 5 6 7
+1 2 3   5 6 7
+1 2       6 7
+1           7-----------------------------------------------------------------------------------------------------------------*/
+//Scanner sc = new Scanner(System.in);
+//System.out.print("Enter n:");
+//short a=sc.nextShort();
+//short n;
+//for(int p =1;p<=(a*2-1);p++){
+//    System.out.print(p);
+////    n++;
+//}
+//        System.out.println();
+//for(int i=1;i<=a;i++){
+//    n=1;
+//    for(int j=a-1;j>=i;j--){
+//        System.out.print(n);
+//        n++;
+//    }
+//    for(int k=1;k<=i;k++){
+//        System.out.print(" ");
+//        n++;
+//    }
+//    for(int l=2;l<=i;l++){
+//        System.out.print(" ");
+//        n++;
+//    }
+//    for(int m=a-1;m>=i;m--){
+//        System.out.print(n);
+//        n++;
+//    }
+//    System.out.println();
+//}
+
+
+
+/*Print the given pattern
+
+        Number Pyramid Mast
+        A B C D E F G
+        A B C   E F G
+        A B       F G
+        A           G--------------------------------------------------------------------------------------------------------*/
+//Scanner sc = new Scanner(System.in);
+//System.out.print("Enter n:");
+//short a=sc.nextShort();
+//char c='A';
+//for(int p=1;p<=(a*2-1);p++){
+//    System.out.print(c);
+//    c++;
+//}
+//System.out.println();
+//for(int i =1;i<=a;i++){
+//    c='A';
+//    for(int j=a-1;j>=i;j--){
+//    System.out.print(c);
+//    c++;
+//    }
+//    for(int k=1;k<=i;k++){
+//        System.out.print(" ");
+//        c++;
+//    }
+//    for(int l=2;l<=i;l++){
+//        System.out.print(" ");
+//        c++;
+//    }
+//    for(int m=a-1;m>=i;m--){
+//        System.out.print(c);
+//        c++;
+//    }
+//    System.out.println();
+//}
+
+/*Print the given pattern
+
+Number Pyramid Mast
+1 2 3 4 3 2 1
+1 2 3   3 2 1
+1 2       2 1
+1           1-----------------------------------------------------------------------------------------------------------------*/
+Scanner sc = new Scanner(System.in);
+System.out.print("Enter n:");
+short a=sc.nextShort();
+short n=0;
+for(int p=1;p<=(a*2-1);p++){
+    if(p<=a) {
+        n++;
+        System.out.print(n);
+    }
+    else{
+        n--;
+        System.out.print(n);
+    }
+}
+System.out.println();
+for(int i =1;i<=a-1;i++){
+    n=1;
+    for(int j=a-1;j>=i;j--){
+        n++;
+        System.out.print(n);
+    }
+    for(int k=1;k<=i;k++){
+        System.out.print(" ");
+    }
+    for(int l=2;l<=i;l++){
+        System.out.print(" ");
+    }
+    for(int m=a-1;m>=i;m--){
+        n--;
+        System.out.print(n);
+    }
+    System.out.println();
+}
+
+
+
+/*Print the given pattern
+
+Number Pyramid Mast
+4 4 4 4 4 4 4
+4 3 3 3 3 3 4
+4 3 2 2 2 3 4
+4 3 2 1 2 3 4
+4 3 2 2 2 3 4
+4 3 3 3 3 3 4
+4 4 4 4 4 4 4--------------------------------------------------------------------------------------------------------------*/
+//        Scanner sc = new Scanner(System.in);
+//        System.out.print("Enter n:");
+//        short a=sc.nextShort();
+//        short x=0;
+//        short b=a;
+//        for(int i =1;i<=a;i++){
+//            for(int j=1;j<=a;j++){
+//                if(i==(1)||j==(1)||i==(a)||j==(a)){
+//                    System.out.print(b);
+//                } else if (i==1+x||j==1+x||i==a-x||j==a-x) {
+//                    System.out.print(b);
+//                } else System.out.print(".");
+//                b--;
+//                x++;
+//            }
+//            System.out.println();
+//        }
     }
 }
